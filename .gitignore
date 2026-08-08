@@ -1,0 +1,7 @@
+context-no-git/
+.DS_Store
+node_modules/
+.env
+.env.local
+dist/
+build/
