@@ -5,3 +5,13 @@ node_modules/
 .env.local
 dist/
 build/
+.gstack/
+.claude/settings.local.json
+
+.next/
+next-env.d.ts
+
+
+# impeccable tooling state
+.impeccable/
+pnpm-lock.yaml
