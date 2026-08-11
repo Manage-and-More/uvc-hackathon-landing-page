@@ -66,7 +66,7 @@ The contact zone is a single stack capped at 900px: a painted blue **Book a call
 
 One authored moment: **marking gets painted on**, left to right, once, as each zone is reached. `.paint` scales X from 0 with `cubic-bezier(.16,1,.3,1)` over 1.05s; `.rise` lifts children 14px with a 70ms stagger.
 
-Everything is visible by default. The hidden start state is scoped to `.js`, added to `<html>` by an inline script in `<head>`, so a blocked or failed script never eats the page. `prefers-reduced-motion` disables both and smooth scrolling.
+Everything is visible by default. The hidden start state is scoped to `.js`, added to `<html>` by an inline script in `<head>`, so a page with scripting off never hides anything. That script also carries a 4s failsafe: if no `Reveal` has mounted and set `data-reveal-ready`, it drops `.js` again, so a bundle that fails to load cannot leave half the page invisible. `prefers-reduced-motion` disables the reveals and smooth scrolling.
 
 ## Browser surfaces
 

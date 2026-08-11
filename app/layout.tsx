@@ -37,9 +37,14 @@ export default function RootLayout({
           href="https://calendly.com"
           crossOrigin="anonymous"
         />
+        {/* Opt into the reveal animations' hidden start state, then release it
+            if the bundle never arrives to run them. Without the failsafe a
+            failed hydration leaves half the page invisible. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
+            __html:
+              "var e=document.documentElement;e.classList.add('js');" +
+              "setTimeout(function(){if(!e.dataset.revealReady)e.classList.remove('js')},4000)",
           }}
         />
       </head>

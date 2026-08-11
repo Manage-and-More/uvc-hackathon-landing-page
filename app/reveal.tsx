@@ -21,6 +21,10 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
 
+    // Tells the layout's failsafe that the bundle arrived and the reveals are
+    // being driven, so it should leave the hidden start state alone.
+    document.documentElement.dataset.revealReady = "1";
+
     if (
       typeof window === "undefined" ||
       !("IntersectionObserver" in window) ||
