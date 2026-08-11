@@ -20,9 +20,6 @@
   --route: #1500ff; /* UVC — ISO mandatory blue. Decided state. */
   --route-wash: rgba(21, 0, 255, 0.09);
   --mark: #04a2cc; /* Manage&More cyan. Graphic on light, text on ink. */
-  --amber: #c98a00; /* hatch fill — graphic only */
-  --amber-ink: #7f5300; /* hatch label — passes 4.5:1 on concrete */
-  --amber-wash: rgba(201, 138, 0, 0.2);
 
   /* rules */
   --hair: rgba(21, 23, 26, 0.16);
@@ -302,54 +299,6 @@ html {
   box-shadow: inset 0 0 0 2px var(--route);
 }
 
-/* ---- status marks ------------------------------------------------------- */
-
-.state {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  font-stretch: 86%;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.state__chip {
-  width: 9px;
-  height: 9px;
-  flex: none;
-}
-
-.state--set {
-  color: var(--ink);
-}
-.state--set .state__chip {
-  background: var(--route);
-}
-
-.state--open {
-  color: var(--amber-ink);
-}
-.state--open .state__chip {
-  background: repeating-linear-gradient(
-    45deg,
-    var(--amber) 0 3px,
-    transparent 3px 6px
-  );
-  box-shadow: inset 0 0 0 1px var(--amber-ink);
-}
-
-/* hatched ground: a zone marked out, not yet commissioned */
-.hatch {
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--amber-wash) 0 9px,
-    transparent 9px 18px
-  );
-}
-
 /* ============================================================================
    Motion — one authored moment: the marking gets painted on, left to right.
    ========================================================================== */
@@ -569,24 +518,12 @@ html {
   background: var(--route);
 }
 
-.ftick--open::before {
-  background: repeating-linear-gradient(
-    90deg,
-    var(--amber) 0 8px,
-    transparent 8px 16px
-  );
-}
-
 .ftick__no {
   color: var(--ink);
 }
 
 .ftick__state {
   color: var(--ink-55);
-}
-
-.ftick--open .ftick__state {
-  color: var(--amber-ink);
 }
 
 .hero__prose {
@@ -724,21 +661,6 @@ html {
   background: var(--route);
 }
 
-.bay--open::before {
-  background: repeating-linear-gradient(
-    90deg,
-    var(--amber) 0 10px,
-    transparent 10px 20px
-  );
-}
-
-.bay__addr {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
 .bay__no {
   color: var(--ink);
 }
@@ -748,24 +670,6 @@ html {
   font-size: 0.9375rem;
   line-height: 1.55;
   flex: 1;
-}
-
-.bay__plate {
-  margin-top: 0.6rem;
-  padding: 0.85rem 0.9rem;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  font-stretch: 86%;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  background: var(--ink);
-  color: #f4f3ef;
-}
-
-.bay__plate.hatch {
-  background-color: transparent;
-  color: var(--amber-ink);
-  box-shadow: inset 0 0 0 2px var(--amber-ink);
 }
 
 /* ---- the judging bar: the one painted zone ------------------------------ */
@@ -888,10 +792,6 @@ html {
   max-width: 32ch;
 }
 
-.tier__id .state {
-  margin-top: 1rem;
-}
-
 .tier__gets {
   display: flex;
   flex-direction: column;
@@ -955,8 +855,9 @@ html {
 
 .figures {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-bottom: 1px solid var(--hair);
+  max-width: 900px;
 }
 
 .fig {
@@ -1012,74 +913,85 @@ html {
   max-width: 44ch;
 }
 
-/* ---- ledger ------------------------------------------------------------- */
-
-.ledger {
-  border-top: 3px solid var(--ink);
-}
-
-.ledger__head,
-.ledger__row {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.72fr) minmax(0, 1fr);
-  gap: clamp(1rem, 2.5vw, 2.5rem);
-}
-
-.ledger__head {
-  padding-block: 0.7rem;
-  border-bottom: 1px solid var(--hair);
-}
-
-.ledger__row {
-  padding-block: clamp(1.15rem, 1.9vw, 1.5rem);
-  border-bottom: 1px solid var(--hair);
-  align-items: start;
-}
-
-.ledger__detail {
-  margin-top: 0.35rem;
-  color: var(--ink-70);
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  max-width: 46ch;
-}
-
-.ledger__closes {
-  color: var(--ink-55);
-  font-size: 0.9375rem;
-  line-height: 1.5;
-}
-
 /* ---- faq ---------------------------------------------------------------- */
 
 .faq {
   border-top: 3px solid var(--ink);
+  max-width: 900px;
 }
 
 .faq__row {
-  display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
-  gap: clamp(1rem, 4vw, 4rem);
-  padding-block: clamp(1.1rem, 1.8vw, 1.5rem);
   border-bottom: 1px solid var(--hair);
-  align-items: start;
 }
 
 .faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: clamp(1.1rem, 1.8vw, 1.45rem);
   font-size: 1.0625rem;
   font-weight: 650;
   line-height: 1.35;
   letter-spacing: -0.012em;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.25s var(--ease);
+}
+
+.faq__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq__q:hover {
+  color: var(--route);
+}
+
+/* a painted cross that becomes a minus when the row is open */
+.faq__sign {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+.faq__sign::before,
+.faq__sign::after {
+  content: "";
+  position: absolute;
+  background: var(--route);
+  transition: transform 0.3s var(--ease);
+}
+
+.faq__sign::before {
+  inset-inline: 0;
+  top: 6px;
+  height: 2px;
+}
+
+.faq__sign::after {
+  inset-block: 0;
+  left: 6px;
+  width: 2px;
+}
+
+.faq__row[open] .faq__sign::after {
+  transform: scaleY(0);
 }
 
 .faq__a {
+  padding-bottom: clamp(1.1rem, 1.8vw, 1.45rem);
+  max-width: 62ch;
   color: var(--ink-70);
   font-size: 1rem;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__sign::before,
+  .faq__sign::after {
+    transition: none;
+  }
 }
 
 /* ---- contact ------------------------------------------------------------ */
@@ -1220,9 +1132,6 @@ html {
   .bays {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .figures {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .fig:nth-child(3) {
     border-right: none;
   }
@@ -1275,14 +1184,9 @@ html {
   .stop__mark {
     top: 2px;
   }
-  .tier,
-  .faq__row,
-  .ledger__row {
+  .tier {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
-  }
-  .ledger__head {
-    display: none;
   }
   .record__note {
     margin-top: 1.25rem;
@@ -1297,7 +1201,7 @@ html {
   .ftick {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.3rem;
+    gap: 0.25rem;
   }
   .verdict__in {
     grid-template-columns: minmax(0, 1fr);

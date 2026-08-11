@@ -22,9 +22,9 @@ Not the audience: participants. No application form on this surface.
 
 Success is a signed challenge partner, a committed jury seat, or an opened compute conversation.
 
-**Proof that is real and usable:** Manage&More's own figures ($2.3B+ raised by alumni startups, 260+ startups founded, 10+ VC funds founded, part of UnternehmerTUM); UVC's profile (Munich/Berlin, B2B, pre-seed to Series A, up to €10M initial, EIF-backed, portfolio incl. Isar Aerospace, Proxima Fusion, Flix, TWAICE, Tacto, Aleph Alpha, planqc, Capmo, Q.ANT); and the operating record — the team has run the Munich hub of the Hack-Nation Global AI Hackathon three times, ~100 builders on site each time, covering venue, catering, sponsoring and full on-site execution.
+**Proof that is real and usable:** Manage&More's own figures ($2.3B+ raised by alumni startups, 260+ startups founded, 10+ VC funds founded, part of UnternehmerTUM); UVC's profile (Munich/Berlin, B2B, pre-seed to Series A, up to €10M initial, EIF-backed, portfolio incl. Isar Aerospace, Proxima Fusion, Flix, TWAICE, Tacto, Aleph Alpha, planqc, Capmo, Q.ANT); with no third-party operating record cited.
 
-**The track record is handled quietly.** One factual line in the delivery section, stated at exactly its true size. It is not a headline, not a stat block, and never phrased to imply we own, co-founded, or ran the global program. Hack-Nation's global figures (5,500 applicants, 14 hubs, 115+ countries) are theirs and never appear.
+**The Hack-Nation record was removed entirely** at the client's request — the reference read awkwardly and invited scrutiny it did not repay. Neither the three Munich hubs nor any Hack-Nation figure appears on the page. Credibility now rests on Manage&More's and UVC's own profiles alone.
 
 **Product-specific truth no neighbour can claim:** a corporate hackathon cannot offer investor access; a student hackathon cannot offer real production problems with the owner in the room. This format offers both because the fund is the structure rather than the sponsor.
 
