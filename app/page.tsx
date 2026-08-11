@@ -25,7 +25,7 @@ const NAV = [
   ["Format", "#format"],
   ["Tracks", "#tracks"],
   ["Partners", "#partners"],
-  ["Questions", "#faq"],
+  ["FAQ", "#faq"],
 ];
 
 const GLANCE: [string, string][] = [
@@ -313,12 +313,8 @@ export default function Page() {
           <div className="verdict">
             <div className="shell verdict__in">
               <p className="verdict__text">
-                Teams are judged on <em>working software</em> — a demo that
-                executes, not a deck that describes one.
-              </p>
-              <p className="verdict__note">
-                Every team demonstrates in front of the jury on Sunday evening.
-                What does not run does not score.
+                Teams are judged on <em>agents that actually run</em> — a demo
+                that executes, not a deck that describes one.
               </p>
             </div>
           </div>
@@ -430,7 +426,7 @@ export default function Page() {
             <Reveal className="zone">
               <div className="rule rule--route paint" />
               <div className="zone__head">
-                <h2 className="h-section">Questions.</h2>
+                <h2 className="h-section">FAQ.</h2>
               </div>
             </Reveal>
 
@@ -516,8 +512,8 @@ export default function Page() {
             />
           </div>
           <p className="foot__note">
-            Industrial AI Agents Hackathon · Munich · October – November 2026.
-            Nothing on this page is confirmed unless it says so.
+            Industrial AI Agents Hackathon · Munich · November 2026. Dates and
+            venue to be confirmed.
           </p>
         </div>
       </footer>

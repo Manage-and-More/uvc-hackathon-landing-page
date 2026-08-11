@@ -42,10 +42,12 @@ The condensed width is what makes marking labels read as floor lettering rather 
 
 Body 1.0625rem/1.55, measure capped at 66ch (`--measure`).
 
+Rhythm: `--band` is `clamp(64px, 6.4vw, 100px)`. It was a third larger while the page ran 9400px; at the current 5600px that padding read as dead air rather than breathing room.
+
 ## Material
 
 - **Ground**: `--concrete` + two-axis slab joints at `rgba(21,23,26,.045)` on a 264px cell, plus an inline SVG `feTurbulence` grit at 0.62 on a 190px tile. The joints are the floor's own slab geometry — the design detector flags this as `codex-grid-background` (advisory) and it is kept deliberately.
-- **Painted bars**: 5px `--route` top bars on bays and floor ticks. Never side stripes.
+- **Painted bars**: 5px `--route` top bars on the bay grid. Never side stripes. The floorline's route runs continuous and unbroken — per-tick bars were tried and cut visible notches into it.
 - **Route direction marks**: `.rule--route::after` lays 115° white hatching over the first 96px, the way a real floor route is arrowed.
 
 No gradients (except the sunk-band tint), no glass, no blur, no rounded cards, no shadows anywhere.
@@ -53,6 +55,8 @@ No gradients (except the sunk-band tint), no glass, no blur, no rounded cards, n
 ## Components
 
 `.shell` (max 1420px) · `.band` / `.band--sunk` · `.rule--route` (zone head) · `.glance` (hero register) · `.floorline` + `.ftick` (bay addresses at the fold) · `.lane` (comparison lanes, `--ours` painted) · `.bay` (the focal grid) · `.verdict` (the painted zone) · `.stop` (run sheet) · `.tier` · `.fig` · `.faq` (native `<details>` toggles) · `.book` · `.mailto`.
+
+**Every register shares the shell's edges.** Figures, FAQ, tiers and the contact actions all start and end where the zone rule above them does; a register that stops short of its own rule reads as a mistake.
 
 The contact zone is a single stack capped at 900px: a painted blue **Book a call** action that opens Calendly in a new tab, the email action beneath it, then the organizer note. No embedded scheduler — Calendly's widget took 8–12s to become interactive, so the page routes out to it instead. Neither action prints an address or duplicates the organizer's name; Calendly carries both on arrival.
 
