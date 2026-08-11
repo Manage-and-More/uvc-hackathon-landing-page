@@ -53,9 +53,9 @@ No gradients (except the sunk-band tint), no glass, no blur, no rounded cards, n
 
 ## Components
 
-`.shell` (max 1420px) · `.band` / `.band--sunk` · `.rule--route` (zone head) · `.glance` (hero register) · `.floorline` + `.ftick` (bay addresses at the fold) · `.lane` (comparison lanes, `--ours` painted) · `.bay` (the focal grid) · `.verdict` (the painted zone) · `.stop` (run sheet) · `.tier` · `.fig` · `.ledger` · `.faq` · `.sched` (Calendly) · `.mailto`.
+`.shell` (max 1420px) · `.band` / `.band--sunk` · `.rule--route` (zone head) · `.glance` (hero register) · `.floorline` + `.ftick` (bay addresses at the fold) · `.lane` (comparison lanes, `--ours` painted) · `.bay` (the focal grid) · `.verdict` (the painted zone) · `.stop` (run sheet) · `.tier` · `.fig` · `.ledger` · `.faq` · `.book` · `.mailto`.
 
-The contact zone is a single stack capped at 900px: the scheduler card, then the email action, then the organizer note. Calendly already renders the organizer's photo and name, so the page adds neither — and the email action redirects without printing the address.
+The contact zone is a single stack capped at 900px: a painted blue **Book a call** action that opens Calendly in a new tab, the email action beneath it, then the organizer note. No embedded scheduler — Calendly's widget took 8–12s to become interactive, so the page routes out to it instead. Neither action prints an address or duplicates the organizer's name; Calendly carries both on arrival.
 
 **Registers over cards.** Lanes, tiers, figures, ledger and FAQ are all ruled rows sharing hairlines, not repeated card containers. The bays are the one grid, and they share borders rather than floating.
 

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Reveal from "./reveal";
-import Scheduler from "./scheduler";
 
 const EMAIL = "akshat.tandon@tum.de";
+const CALENDLY = "https://calendly.com/akshat-tandon-tum/30min";
 
 function Arrow() {
   return (
@@ -733,7 +733,18 @@ export default function Page() {
             </Reveal>
 
             <div className="contact__stack">
-              <Scheduler />
+              <a
+                className="book"
+                href={CALENDLY}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="book__label">Book a call</span>
+                <span className="book__meta">30 minutes · video</span>
+                <span className="book__arrow">
+                  <Arrow />
+                </span>
+              </a>
 
               <a
                 className="mailto"

@@ -29,6 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivo.variable}>
       <head>
+        {/* Calendly's two hosts, warmed during page render so the scheduler
+            pays no DNS/TLS cost when it mounts. */}
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link
+          rel="preconnect"
+          href="https://calendly.com"
+          crossOrigin="anonymous"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: "document.documentElement.classList.add('js')",

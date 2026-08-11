@@ -18,7 +18,7 @@ Not the audience: participants. No application form on this surface.
 
 ## 2. Outcome and proof
 
-**Primary action:** book a 30-minute conversation — `https://calendly.com/akshat-tandon-tum/30min`, embedded as a bordered card in a dedicated contact section, lazy-loaded. **Secondary:** an email action directly beneath it that opens the reader's mail client with a subject pre-filled; the address itself is not printed on the page. Neither appears loose in the hero.
+**Primary action:** book a 30-minute conversation — a **Book a call** button routing to `https://calendly.com/akshat-tandon-tum/30min` in a new tab. The embed was tried and dropped: Calendly's widget took 8–12s to become interactive regardless of when loading started. **Secondary:** an email action directly beneath it that opens the reader's mail client with a subject pre-filled; the address itself is not printed on the page. Neither appears loose in the hero.
 
 Success is a signed challenge partner, a committed jury seat, or an opened compute conversation.
 
@@ -61,7 +61,7 @@ Mechanism → offer → proof → status → ask. The argument: *this format is 
 5. **Who's delivering** — Manage&More × UVC, both under UnternehmerTUM, with the operating record stated quietly.
 6. **Where it stands** — the open items, each shown with what unblocks it and who decides.
 7. **FAQ** — see below.
-8. **Contact** — Calendly card, then an email action beneath it. No photo or name of our own: Calendly already carries both. Organized by Manage&More.
+8. **Contact** — a Book a call button routing to Calendly, then an email action beneath it. No photo or name of our own. Organized by Manage&More.
 
 ## 5. Open items — "open because you decide them"
 
@@ -94,7 +94,7 @@ Answers are pre-filled where PRODUCT.md already settles the fact, and marked **T
 - **Stack:** Next.js, single marketing route. Chosen for the option to add participant applications later; not a requirement now.
 - **Language:** English only.
 - **Assets:** logos at `context-no-git/*.png` (white backgrounds must be knocked out — done for the comps, redo at build); organizer portrait not used on the page — Calendly renders the photo and name itself, so a second copy was removed.
-- **Third party:** Calendly embed, lazy-loaded so it costs nothing until scrolled to.
+- **Third party:** none at runtime. Calendly is a plain outbound link, so no third-party script, iframe or tracking loads with the page.
 - **Responsive:** desktop and mobile. The bays become a stacked register on narrow screens; the route line stays continuous.
 - **Accessibility:** status is never carried by colour alone — every open/decided state carries a text label. Amber on concrete must clear contrast at its used size.
 - **A builder must not invent:** any date, venue, partner name, figure, or claim not present in PRODUCT.md's Evidence on Hand.

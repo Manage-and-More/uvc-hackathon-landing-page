@@ -1088,39 +1088,53 @@ html {
   max-width: 900px;
 }
 
-.sched {
-  border: 3px solid var(--ink);
-  background: var(--concrete);
-}
-
-.sched__head {
-  display: flex;
+.book {
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.95rem 1.15rem;
-  border-bottom: 3px solid var(--ink);
+  gap: 0.35rem 1.5rem;
+  padding: 1.6rem 1.75rem;
+  background: var(--route);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s var(--ease);
 }
 
-.sched__frame {
-  min-width: 320px;
-  height: 880px;
-  min-height: 880px;
+.book__label {
+  grid-column: 1;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-.sched__wait {
+.book__meta {
+  grid-column: 1;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-stretch: 86%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.book__arrow {
+  grid-column: 2;
+  grid-row: 1 / 3;
   display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
+  transition: transform 0.4s var(--ease);
 }
 
-.sched__fallback {
-  font-size: 0.9375rem;
+.book:hover {
+  background: var(--ink);
+}
+
+.book:hover .book__arrow {
+  transform: translateX(6px);
+}
+
+.book ::selection {
+  background: #fff;
+  color: var(--route);
 }
 
 .mailto {
