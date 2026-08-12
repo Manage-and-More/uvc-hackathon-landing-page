@@ -2,6 +2,8 @@
 
 Confirmed with the user, 2026-08-08. Output of `/impeccable shape`. No code written yet.
 
+> **Amended 2026-08-12.** The user revised several constraints after the first shipped build; where this brief conflicts, PRODUCT.md and DESIGN.md now govern. The changes: prize figures are on the page (named as "AI credits", never the lab); the hatched "to be announced" partner plates are reinstated as a partner line-up roster (Challenge ×2, Corporate, Compute, Strategic slots); the FAQ is answered with the user's own copy and labeled "For our partners"; Hack-Nation may be mentioned once, quietly, in the organizing FAQ answer; dates are "November 2026"; builders ≈150; illustrative challenge directions from the v1 proposal appear under the bays; and no em-dashes anywhere in site copy.
+
 ## 1. Job and audience
 
 A single Persuade surface. Partner recruitment, not an application funnel.
@@ -22,9 +24,9 @@ Not the audience: participants. No application form on this surface.
 
 Success is a signed challenge partner, a committed jury seat, or an opened compute conversation.
 
-**Proof that is real and usable:** Manage&More's own figures ($2.3B+ raised by alumni startups, 260+ startups founded, 10+ VC funds founded, part of UnternehmerTUM); UVC's profile (Munich/Berlin, B2B, pre-seed to Series A, up to €10M initial, EIF-backed, portfolio incl. Isar Aerospace, Proxima Fusion, Flix, TWAICE, Tacto, Aleph Alpha, planqc, Capmo, Q.ANT); with no third-party operating record cited.
+**Proof that is real and usable:** Manage & More's own figures ($2.3B+ raised by alumni startups, 260+ startups founded, 10+ VC funds founded, part of UnternehmerTUM); UVC's profile (Munich/Berlin, B2B, pre-seed to Series A, up to €10M initial, EIF-backed, portfolio incl. Isar Aerospace, Proxima Fusion, Flix, TWAICE, Tacto, Aleph Alpha, planqc, Capmo, Q.ANT); with no third-party operating record cited.
 
-**The Hack-Nation record was removed entirely** at the client's request — the reference read awkwardly and invited scrutiny it did not repay. Neither the three Munich hubs nor any Hack-Nation figure appears on the page. Credibility now rests on Manage&More's and UVC's own profiles alone.
+**The Hack-Nation record was removed entirely** at the client's request — the reference read awkwardly and invited scrutiny it did not repay. Neither the three Munich hubs nor any Hack-Nation figure appears on the page. Credibility now rests on Manage & More's and UVC's own profiles alone.
 
 **Product-specific truth no neighbour can claim:** a corporate hackathon cannot offer investor access; a student hackathon cannot offer real production problems with the owner in the room. This format offers both because the fund is the structure rather than the sponsor.
 
@@ -34,7 +36,7 @@ Assigned by roll (seed `732e1b23`, candidate 6 of the grounded list), confirmed 
 
 **Visual authority:** German factory-floor zone marking — ASR A1.3 route lines, painted bays, stencilled bay numbers, hatched ground where a zone is marked out but not yet commissioned. The audience's own physical environment: UnternehmerTUM's halls, MakerSpace, the Urban Colab.
 
-**Why it reconciles the three brands.** ISO safety blue is already the mandatory-action colour, so UVC's near-pure blue becomes the route line, Manage&More's cyan `#04A2CC` the secondary marking, both on machine-grey concrete. Neither logo is decoration and neither is junior — they sit co-equal in the title strip. Industrial AI is not illustrated with robot imagery; it is carried by the ground itself.
+**Why it reconciles the three brands.** ISO safety blue is already the mandatory-action colour, so UVC's near-pure blue becomes the route line, Manage & More's cyan `#04A2CC` the secondary marking, both on machine-grey concrete. Neither logo is decoration and neither is junior — they sit co-equal in the title strip. Industrial AI is not illustrated with robot imagery; it is carried by the ground itself.
 
 **Structural thesis:** the page is the hall, marked out before the equipment lands. What is painted is decided. What is hatched is open — and open because the reader has not chosen it yet.
 
@@ -58,10 +60,10 @@ Mechanism → offer → proof → status → ask. The argument: *this format is 
 2. **Why a fund, not a sponsor** — the wedge. Portfolio sets the problems, partners judge, fund gets concentrated exposure to strong builders under pressure.
 3. **How it runs** — four challenge tracks as bays, the jury, the weekend shape, and the criterion that defines it: agents that actually run, not the pitch.
 4. **What a partner gets** — by tier (challenge partner / jury / compute). What each tier *receives*. No € figures, no contribution amounts.
-5. **Who's delivering** — Manage&More × UVC, both under UnternehmerTUM, with the operating record stated quietly.
+5. **Who's delivering** — Manage & More × UVC, both under UnternehmerTUM, with the operating record stated quietly.
 6. **Where it stands** — the open items, each shown with what unblocks it and who decides.
 7. **FAQ** — see below.
-8. **Contact** — a Book a call button routing to Calendly, then an email action beneath it. No photo or name of our own. Organized by Manage&More.
+8. **Contact** — a Book a call button routing to Calendly, then an email action beneath it. No photo or name of our own. Organized by Manage & More.
 
 ## 5. Open items — "open because you decide them"
 
@@ -83,7 +85,7 @@ A plain FAQ. Clean, on-theme, no invention. Questions drawn from UVC's own list,
 
 Answers are pre-filled where PRODUCT.md already settles the fact, and marked **TBD** where the decision is genuinely open, for the user to complete.
 
-**Answerable today:** which days (Saturday kick-off, Sunday demos and jury) · who's organizing (Manage&More × UVC, both under UnternehmerTUM) · who it's for (~150 builders, on site) · what kind of problems (live production problems from portfolio companies, a corporate track, a UVC hypothesis track) · how teams are judged (working software, not the pitch).
+**Answerable today:** which days (Saturday kick-off, Sunday demos and jury) · who's organizing (Manage & More × UVC, both under UnternehmerTUM) · who it's for (~150 builders, on site) · what kind of problems (live production problems from portfolio companies, a corporate track, a UVC hypothesis track) · how teams are judged (working software, not the pitch).
 
 **TBD:** exact weekend · venue · application deadline · solo or team applications · prize structure · what a challenge partner contributes · compute partner.
 
@@ -103,4 +105,4 @@ Answers are pre-filled where PRODUCT.md already settles the fact, and marked **T
 
 ## 8. Anti-goals
 
-No countdown timer. No participant application form or waitlist. No dark hero with a blue-cyan gradient and glass cards. No node-graph or robot-arm AI motif. No fabricated logo wall or "trusted by" strip. No testimonials or quotes of any kind. No stat block borrowing Hack-Nation's global figures. No "meet the organizer" section — the event is organized by Manage&More; Akshat is a contact, not the face.
+No countdown timer. No participant application form or waitlist. No dark hero with a blue-cyan gradient and glass cards. No node-graph or robot-arm AI motif. No fabricated logo wall or "trusted by" strip. No testimonials or quotes of any kind. No stat block borrowing Hack-Nation's global figures. No "meet the organizer" section — the event is organized by Manage & More; Akshat is a contact, not the face.

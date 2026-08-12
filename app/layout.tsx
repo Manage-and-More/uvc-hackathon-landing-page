@@ -10,13 +10,13 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Industrial AI Agents Hackathon — Manage&More × UVC Partners",
+  title: "Industrial AI Agents Hackathon · Manage & More × UVC Partners",
   description:
-    "A two-day hackathon on agentic AI for industry. Munich, October–November 2026. UVC portfolio companies set the challenges, partners judge, and teams are scored on agents that actually run.",
+    "The first hackathon built inside a venture fund. Two days in Munich on agentic AI for industry, November 2026. UVC portfolio companies set the challenges, UVC partners judge, and teams are scored on agents that actually run.",
   openGraph: {
     title: "Industrial AI Agents Hackathon",
     description:
-      "Two days, Munich. Four challenge tracks set by UVC portfolio companies. Teams are scored on agents that actually run.",
+      "The first hackathon built inside a venture fund. Two days, Munich, November 2026. Four challenge tracks set around the UVC portfolio. Teams are scored on agents that actually run.",
     type: "website",
   },
 };
@@ -71,7 +71,7 @@ const DIRECTION_CONTRACT = `<!--
 
           OWN-WORLD: German factory-floor zone marking. Machine-grey concrete ground
           (#EAE9E5) under grit; UVC blue (#1500FF) as the ISO-mandatory route line and
-          decided state; Manage&More cyan (#04A2CC) as secondary marking; caution amber
+          decided state; Manage & More cyan (#04A2CC) as secondary marking; caution amber
           (#B87A00) hatching for uncommissioned ground. Archivo, a signage grotesque,
           tabular numerals on every status value. Bays, plates, rules and stencil labels —
           no cards, no glass, no gradients.

@@ -22,7 +22,7 @@ The page is a partner-recruitment asset, not an application funnel. Three audien
 
 ## Product Purpose
 
-A two-day on-site hackathon in Munich on **agentic AI for industry**, organized by Manage&More (UnternehmerTUM's flagship entrepreneurship program) together with UVC Partners (UnternehmerTUM Venture Capital Partners).
+A two-day on-site hackathon in Munich on **agentic AI for industry**, organized by Manage & More (UnternehmerTUM's flagship entrepreneurship program) together with UVC Partners (UnternehmerTUM Venture Capital Partners).
 
 The page exists to make the concept legible and credible enough that: portfolio companies commit challenge tracks, UVC partners commit jury seats, and an AI lab opens a compute-partner conversation. Success is signed partners, not traffic.
 
@@ -46,7 +46,7 @@ A corporate-sponsored hackathon cannot offer investor access. A generic student 
 - Jury composition: a CTO or C-level representative from each startup partner, one UVC partner, one seat for the corporate partner.
 - Judging criterion that defines the event: **agents that actually run**, not the pitch alone. Teams are evaluated on working software.
 - Compute partner supplies AI credits for building across the weekend and as prizes.
-- The event is a joint Manage&More × UVC production. Both organizations sit under UnternehmerTUM, which is the structural reason the partnership exists.
+- The event is a joint Manage & More × UVC production. Both organizations sit under UnternehmerTUM, which is the structural reason the partnership exists.
 
 ## Capabilities and Constraints
 
@@ -54,35 +54,36 @@ A corporate-sponsored hackathon cannot offer investor access. A generic student 
 
 | Fact | Status | On the page |
 |---|---|---|
-| Dates | Open. Targeting October or November 2026. The internal one-pager's "15–16 August 2026" is superseded. | Show as TBD within the Oct/Nov window |
+| Dates | Open within November 2026 (updated 2026-08-12; earlier Oct/Nov window and "15–16 August 2026" both superseded). | "November 2026" |
 | Venue | Open. Internal candidates exist; none agreed. | TBD |
-| Compute partner | Prospect, not signed. | Refer to "AI credits" / a compute partner generically. **Never name the lab.** |
-| Challenge partner companies | Prospects. The page is the instrument for recruiting them. | No company names |
-| Corporate partner / LP | Not identified. | Track described, partner unnamed |
-| Strategic partner (CSEE) | Not agreed. | Omit entirely |
-| Partner contribution amounts | Decided internally, not for the page. | Describe what each partner tier *receives*; no € figures |
-| Prize amounts | Not for the page. | Prize structure may be referenced in kind, no figures |
-| Participant applications | Not a function of this surface. | No application form |
+| Compute partner | Prospect (Anthropic), not signed. | Refer to "AI credits" / a compute partner generically. **Never name the lab** until the deal exists. |
+| Challenge partner companies | Prospects. The page is the instrument for recruiting them. | No company names. Shown as hatched "To be announced" slots in the partner line-up. |
+| Corporate partner / LP | Not identified. | Track described, partner unnamed, TBA slot |
+| Strategic partner (CSEE) | Not agreed. | A "Strategic partner" TBA slot exists; CSEE itself is never named until agreed |
+| Partner contribution amounts | Decided internally, not for the page. | Describe what each partner tier *receives*; no € fee figures. Fees stay for the call. |
+| Prize amounts | Decided 2026-08-12: shown on the page. | Full prize table with € figures and "AI credits" (never the lab's name), plus a "structure may evolve" note |
+| Participant applications | Not a function of this surface. | No application form. Application mechanics (Luma, resume, LinkedIn, motivation, curated) may be described in the FAQ. |
 
 Other constraints:
 
 - Language: English.
+- **No em-dashes anywhere in site copy** (user rule, 2026-08-12, to keep a human feel). Use commas, colons, or new sentences instead.
 - The event has never run before. There is no prior edition of *this* event to cite, photograph, or quote.
 - Any fact not listed as confirmed in this file or in Evidence on Hand must not appear on the page. When in doubt, the page shows the item as open.
 
 ## Brand Commitments
 
-- **Manage&More** — logo at `context-no-git/manage-and-more-logo.png`. Black wordmark, cyan spiral mark (`#04A2CC`, taken from the mark's own SVG on manageandmore.de).
+- **Manage & More** — logo at `context-no-git/manage-and-more-logo.png`. Black wordmark, cyan spiral mark (`#04A2CC`, taken from the mark's own SVG on manageandmore.de).
 - **UVC Partners** — logo at `context-no-git/uvc-logo.png`. Black "UVC PARTNERS" wordmark with a single saturated blue stroke on the U (approximately pure blue).
 - Both logos appear, co-equal. Neither organization is the junior partner.
-- The design language must hold three things at once: Manage&More, UVC Partners, and the industrial-AI subject matter. That reconciliation is a real constraint, not a nice-to-have.
+- The design language must hold three things at once: Manage & More, UVC Partners, and the industrial-AI subject matter. That reconciliation is a real constraint, not a nice-to-have.
 - Voice: direct and builder-facing. Not corporate deck language, not student-club language.
 
 ## Evidence on Hand
 
 Real, verified, and usable. All figures below are published by the organizations themselves.
 
-**Manage&More / UnternehmerTUM** (manageandmore.de, verified 2026-08-08)
+**Manage & More / UnternehmerTUM** (manageandmore.de, verified 2026-08-08)
 - Alumni-founded startups have raised **more than $2.3B** in capital.
 - **260+ startups founded** by the community.
 - **10+ VC funds founded** by alumni.
@@ -112,6 +113,6 @@ Real, verified, and usable. All figures below are published by the organizations
 
 1. **Everything on the page is either true today or visibly marked as open.** The readers are investors and operators who will check. One overstated claim costs the partnership; an honest TBD costs nothing.
 2. **The fund is the structure, not the sponsor.** Every section should make the VC-centered format legible, because that format is the whole reason this event is worth a partner's money.
-3. **Prove capability with track record we actually own, and state it at its true size.** Manage&More's numbers and three Munich hubs at ~100 builders are ours. The global program's scale is not. Understating a real fact is survivable; inflating one in front of investors is not.
+3. **Prove capability with track record we actually own, and state it at its true size.** Manage & More's numbers and three Munich hubs at ~100 builders are ours. The global program's scale is not. Understating a real fact is survivable; inflating one in front of investors is not.
 4. **Answer the skeptic before they ask.** UVC's open questions — dates, sponsorship structure, prizes, attendance risk, delivery quality — are the real brief. A question left unaddressed reads as a question unconsidered.
 5. **Read as the first edition of a format, not a one-off student event.** The ambition to run this repeatedly, with other funds, shows up as craft and confidence. Never as a claim.

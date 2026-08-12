@@ -8,7 +8,7 @@ German factory-floor zone marking. The page is a hall marked out before the equi
 
 The world originally carried an open/decided state system (hatched amber for unassigned tracks, painted blue for settled ones). That was removed at the client's request: the page no longer signals which tracks are taken. Open items read as plain TBDs in the hero register instead.
 
-This reconciles the three things the page must hold at once. ISO safety blue is already the mandatory-action colour on a factory floor, so UVC's blue becomes the route line and the decided state; Manage&More's cyan is the secondary marking; industrial AI is carried by the ground itself rather than illustrated with robot or node-graph imagery.
+This reconciles the three things the page must hold at once. ISO safety blue is already the mandatory-action colour on a factory floor, so UVC's blue becomes the route line and the decided state; Manage & More's cyan is the secondary marking; industrial AI is carried by the ground itself rather than illustrated with robot or node-graph imagery.
 
 Direction contract with seed key `732e1b23` ships as an HTML comment, first child of `<body>` in `app/layout.tsx`. It is emitted via `dangerouslySetInnerHTML` because JSX comments are stripped at compile and would not survive the build.
 
@@ -23,7 +23,7 @@ Direction contract with seed key `732e1b23` ships as an HTML comment, first chil
 | `--ink-55` | `#5e6165` | labels, secondary — 5.0:1 |
 | `--ink-40` | `#8b8e91` | **non-text only** (scrollbar, the `×` glyph) — fails 4.5:1 |
 | `--route` | `#1500ff` | UVC. Route line, decided state, the one painted zone |
-| `--mark` | `#04a2cc` | Manage&More. Graphic on light; text only on ink (6.2:1) |
+| `--mark` | `#04a2cc` | Manage & More. Graphic on light; text only on ink (6.2:1) |
 | `--hair` / `--hair-strong` | `rgba(21,23,26,.16)` / `.34` | rules |
 
 Strategy: restrained on the ground, with one Committed field — the `.verdict` band, full-bleed `--route`, carrying the judging criterion. It is the page's only saturated region and its density beat.
@@ -78,8 +78,28 @@ Breakpoints 1080 / 900 / 760 / 620 / 520. Bays go 4 → 2 → 1. Floor ticks go 
 
 ## Rules a future change must not break
 
+Amended 2026-08-12 with the user's decisions; rules 2 and 3 changed from the original.
+
 1. Anything not confirmed in PRODUCT.md is either marked TBD or left off. Never invented.
-2. Never name the compute partner lab, a challenge partner company, CSEE, or any € contribution or prize figure.
-3. Hack-Nation is not referenced on this page at all, in any form.
+2. Never name the compute partner lab, a challenge partner company, or CSEE until a deal exists. Never print partner fee figures. Prize figures ARE on the page (decided 2026-08-12), always as "AI credits", never as the lab's product.
+3. Hack-Nation appears exactly once, as a quiet operating fact in the FAQ answer about who is organizing ("most recently hosting the Munich hub of Hack-Nation"). Never as a headline claim, never with the global program's figures.
 4. Both logos stay co-equal. Neither organization is junior.
 5. The four bays and the painted verdict zone are the page's focal moments. Do not dilute them.
+6. No em-dashes in site copy. Commas, colons, or new sentences instead.
+7. The hatched amber "To be announced" plates in the partner line-up are the open/decided state system, reinstated 2026-08-12. A signed partner replaces its plate with a logo; the hatch never apologizes.
+
+## 2026-08-12 additions
+
+- **Vocabulary: "Bay" renamed to "Track"** in all user-facing copy (floorline ticks, track cards, slot descriptions, contact heading). Partners, the proposals, and the nav all say "track"; "bay" made readers translate. The CSS class names (`.bays`, `.bay__*`) keep the floor metaphor internally.
+- **Ampersand fix**: Archivo's U+26 is a reversed-3 "Et" form that turns "Manage & More" illegible at text sizes. An "Amp" `@font-face` with `unicode-range: U+26` and `local()` Helvetica/Arial sources sits first in `--sans`, so every ampersand renders in a conventional shape with no markup changes.
+
+- **Hero entrance**: kicker fades, headline lines rise out of clipped `.hline` boxes, glance rows and floorline ticks stagger in, the floorline route paints left to right. Pure CSS keyframes gated on `.js`.
+- **Route progress** (`.routeprog`, `app/fx.tsx`): a fixed 4px route line at the left viewport edge fills top-to-bottom with scroll progress. Hidden below 900px and under reduced motion.
+- **Verdict sweep**: a concrete overlay rolls back (scaleX to 0, origin right) to reveal the painted zone; text rises after. Overlay only exists under `.js` and is removed under reduced motion.
+- **Run sheet**: stops and their route segments draw in sequence via staggered transitions on `.runsheet.is-on`.
+- **Count-up figures** (`CountUp`, `app/fx.tsx`): final values server-rendered; JS animates from 0 when visible, skipped under reduced motion.
+- **Nav spy** (`NavSpy`, `app/fx.tsx`): masthead links underline the section in view.
+- **FAQ** (`app/faq.tsx`): native `<details>` enhanced with a measured height transition; native snap without JS or under reduced motion.
+- **Challenge directions** (`.directions`): a four-column illustrative register under the bays, cyan tick per item, explicitly framed as "partners define their own briefs".
+- **Prizes** (`.prizes`): ruled rows, tabular numerals, first-place values painted route blue. Column headers collapse to per-cell labels below 760px.
+- **Partner line-up** (`.slots`): a 3×2 roster grid sharing hairlines; the organized-by cell carries the painted top bar, the five open slots carry amber hatch plates (`#7a5200` text on concrete for contrast) with a background-position sheen on hover.
