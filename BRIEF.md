@@ -2,7 +2,7 @@
 
 Confirmed with the user, 2026-08-08. Output of `/impeccable shape`. No code written yet.
 
-> **Amended 2026-08-12.** The user revised several constraints after the first shipped build; where this brief conflicts, PRODUCT.md and DESIGN.md now govern. The changes: prize figures are on the page (named as "AI credits", never the lab); the hatched "to be announced" partner plates are reinstated as a partner line-up roster (Challenge ×2, Corporate, Compute, Strategic slots); the FAQ is answered with the user's own copy and labeled "For our partners"; Hack-Nation may be mentioned once, quietly, in the organizing FAQ answer; dates are "November 2026"; builders ≈150; illustrative challenge directions from the v1 proposal appear under the bays; and no em-dashes anywhere in site copy.
+> **Amended 2026-08-12.** The user revised several constraints after the first shipped build; where this brief conflicts, PRODUCT.md and DESIGN.md now govern. The changes: prize figures are on the page (named as "AI credits", never the lab); the hatched "to be announced" partner plates are reinstated as a partner line-up roster (Challenge ×2, Corporate, Compute, Strategic slots); the FAQ is answered with the user's own copy and labeled "For our partners"; Hack-Nation may be mentioned once, quietly, in the organizing FAQ answer; dates are "24-25 October 2026"; builders ≈150; illustrative challenge directions from the v1 proposal appear under the bays; and no em-dashes anywhere in site copy.
 
 ## 1. Job and audience
 

@@ -12,14 +12,14 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   title: "Industrial AI Agents Hackathon · Manage & More × UVC Partners",
   description:
-    "The first hackathon built inside a venture fund. Two days in Munich on agentic AI for industry, November 2026. UVC portfolio companies set the challenges, UVC partners judge, and teams are scored on agents that actually run.",
+    "The first hackathon built inside a venture fund. Two days in Munich on agentic AI for industry, 24-25 October 2026. UVC portfolio companies set the challenges, UVC partners judge, and teams are scored on agents that actually run.",
   openGraph: {
     title: "Industrial AI Agents Hackathon",
     description:
-      "The first hackathon built inside a venture fund. Two days, Munich, November 2026. Four challenge tracks set around the UVC portfolio. Teams are scored on agents that actually run.",
+      "The first hackathon built inside a venture fund. Two days, Munich, 24-25 October 2026. Four challenge tracks set around the UVC portfolio. Teams are scored on agents that actually run.",
     type: "website",
   },
-};
+};  
 
 export default function RootLayout({
   children,

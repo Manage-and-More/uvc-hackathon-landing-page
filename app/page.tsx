@@ -33,7 +33,7 @@ const NAV: [string, string][] = [
 
 const GLANCE: [string, string][] = [
   ["Format", "Two days, on site"],
-  ["When", "November 2026"],
+  ["When", "24-25 October 2026"],
   ["Where", "Munich · venue TBD"],
   ["Builders", "≈ 150"],
 ];
@@ -303,7 +303,7 @@ export default function Page() {
           <div className="shell hero__in">
             <div className="hero__lead">
               <p className="label hero__kick">
-                Agentic AI for industry · Munich · November 2026
+                Agentic AI for industry · Munich · 24-25 October 2026
               </p>
 
               <h1 className="h-display">
@@ -730,8 +730,7 @@ export default function Page() {
             />
           </div>
           <p className="foot__note">
-            Industrial AI Agents Hackathon · Munich · November 2026. Dates and
-            venue to be confirmed.
+            Industrial AI Agents Hackathon · Munich · 24-25 October 2026
           </p>
         </div>
       </footer>

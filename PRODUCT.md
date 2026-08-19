@@ -54,7 +54,7 @@ A corporate-sponsored hackathon cannot offer investor access. A generic student 
 
 | Fact | Status | On the page |
 |---|---|---|
-| Dates | Open within November 2026 (updated 2026-08-12; earlier Oct/Nov window and "15–16 August 2026" both superseded). | "November 2026" |
+| Dates | 24-25 October 2026
 | Venue | Open. Internal candidates exist; none agreed. | TBD |
 | Compute partner | Prospect (Anthropic), not signed. | Refer to "AI credits" / a compute partner generically. **Never name the lab** until the deal exists. |
 | Challenge partner companies | Prospects. The page is the instrument for recruiting them. | No company names. Shown as hatched "To be announced" slots in the partner line-up. |
