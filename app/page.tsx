@@ -62,23 +62,7 @@ const LANES: {
   },
 ];
 
-const TRACKS: { no: string; kind: string; body: string }[] = [
-  {
-    no: "01",
-    kind: "Portfolio startup",
-    body: "A live production problem from a UVC portfolio company, with the person who owns it in the room for two days.",
-  },
-  {
-    no: "02",
-    kind: "Portfolio startup",
-    body: "A second portfolio company, a second real problem, with real data or API access to build against from day one.",
-  },
-  {
-    no: "03",
-    kind: "Portfolio or UVC thesis",
-    body: "A third portfolio company, or a challenge built on an investment thesis UVC is actively testing.",
-  },
-];
+const TRACKS = ["01", "02", "03"];
 
 const DIRECTIONS: [string, string][] = [
   [
@@ -115,21 +99,6 @@ const RUNSHEET: [string, string, string][] = [
     "Code freeze and demos",
     "Submissions close at 15:00. Track judging from 15:30, finals and awards at 17:30.",
   ],
-];
-
-const SLOTS: { tier: string; desc: string }[] = [
-  {
-    tier: "Challenge partner · Track 01",
-    desc: "A UVC portfolio company with a live production problem.",
-  },
-  {
-    tier: "Challenge partner · Track 02",
-    desc: "A second UVC portfolio company, a second real problem.",
-  },
-  {
-    tier: "Challenge partner · Track 03",
-    desc: "A third portfolio company, or UVC's own thesis track.",
-  },
 ];
 
 const FIGURES: {
@@ -271,10 +240,10 @@ export default function Page() {
           <div className="floorline" aria-hidden="true">
             <div className="floorline__route" />
             <div className="shell floorline__ticks">
-              {TRACKS.map((track) => (
-                <span className="ftick" key={track.no}>
-                  <span className="ftick__no">Track {track.no}</span>
-                  <span className="ftick__state">{track.kind}</span>
+              {TRACKS.map((no) => (
+                <span className="ftick" key={no}>
+                  <span className="ftick__no">Track {no}</span>
+                  <span className="ftick__state">To be announced</span>
                 </span>
               ))}
             </div>
@@ -326,18 +295,18 @@ export default function Page() {
               <div className="zone__head">
                 <h2 className="h-section">Three tracks on the floor.</h2>
                 <p className="prose">
-                  Each track is one partner&rsquo;s problem, worked on by
-                  several teams at once. Briefs are revealed at the kick-off.
+                  Each track is a live problem from a UVC portfolio company,
+                  worked on by several teams at once. Partners are announced
+                  as they sign; briefs are revealed at the kick-off.
                 </p>
               </div>
             </Reveal>
 
             <ol className="bays">
-              {TRACKS.map((track) => (
-                <Reveal as="li" key={track.no} className="bay">
-                  <span className="label bay__no">Track {track.no}</span>
-                  <h3 className="h-block bay__kind">{track.kind}</h3>
-                  <p className="bay__body">{track.body}</p>
+              {TRACKS.map((no) => (
+                <Reveal as="li" key={no} className="bay">
+                  <span className="label bay__no">Track {no}</span>
+                  <h3 className="h-block bay__kind">To be announced</h3>
                 </Reveal>
               ))}
             </ol>
@@ -461,13 +430,14 @@ export default function Page() {
                 </p>
               </Reveal>
 
-              {SLOTS.map((slot) => (
-                <Reveal as="div" key={slot.tier} className="slot">
-                  <span className="label slot__tier">{slot.tier}</span>
+              {TRACKS.map((no) => (
+                <Reveal as="div" key={no} className="slot">
+                  <span className="label slot__tier">
+                    Challenge partner · Track {no}
+                  </span>
                   <div className="slot__plate">
                     <span className="slot__tba">To be announced</span>
                   </div>
-                  <p className="slot__desc">{slot.desc}</p>
                 </Reveal>
               ))}
             </div>
