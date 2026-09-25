@@ -4,7 +4,7 @@ import FaqItem from "./faq";
 import { CountUp, NavSpy, RouteProgress } from "./fx";
 
 const EMAIL = "akshat.tandon@tum.de";
-const CALENDLY = "https://calendly.com/akshat-tandon-tum/30min";
+const LUMA = "https://luma.com/070qezlj";
 
 function Arrow() {
   return (
@@ -24,9 +24,8 @@ function Arrow() {
 }
 
 const NAV: [string, string][] = [
-  ["Format", "#format"],
+  ["Concept", "#concept"],
   ["Tracks", "#tracks"],
-  ["Prizes", "#prizes"],
   ["Partners", "#partners"],
   ["FAQ", "#faq"],
 ];
@@ -34,8 +33,9 @@ const NAV: [string, string][] = [
 const GLANCE: [string, string][] = [
   ["Format", "Two days, on site"],
   ["When", "24-25 October 2026"],
-  ["Where", "Munich · venue TBD"],
-  ["Builders", "≈ 150"],
+  ["Where", "Munich"],
+  ["Builders", "≈ 100"],
+  ["Teams", "Solo or 2-4"],
 ];
 
 const LANES: {
@@ -65,23 +65,18 @@ const LANES: {
 const TRACKS: { no: string; kind: string; body: string }[] = [
   {
     no: "01",
-    kind: "UVC hypothesis",
-    body: "A challenge built on an investment hypothesis UVC is actively testing.",
-  },
-  {
-    no: "02",
     kind: "Portfolio startup",
     body: "A live production problem from a UVC portfolio company, with the person who owns it in the room for two days.",
   },
   {
-    no: "03",
+    no: "02",
     kind: "Portfolio startup",
-    body: "A second portfolio company, a second real problem, reserved for the UVC portfolio.",
+    body: "A second portfolio company, a second real problem, with real data or API access to build against from day one.",
   },
   {
-    no: "04",
-    kind: "Corporate",
-    body: "An industrial operator's problem at the scale it actually occurs.",
+    no: "03",
+    kind: "Portfolio or UVC thesis",
+    body: "A third portfolio company, or a challenge built on an investment thesis UVC is actively testing.",
   },
 ];
 
@@ -106,99 +101,34 @@ const DIRECTIONS: [string, string][] = [
 
 const RUNSHEET: [string, string, string][] = [
   [
-    "Saturday, morning",
+    "Saturday, 10:00",
     "Kick-off",
-    "Tracks are opened by the people who set them. Teams pick a track and start.",
+    "Check-in, opening and track briefings from the challenge owners. Teams form, and hacking starts at noon.",
   ],
   [
     "Saturday → Sunday",
     "Build",
-    "Two days on site. Challenge owners stay reachable. A compute partner supplies AI credits for building across the weekend.",
+    "The venue stays open overnight. Challenge owners hold office hours, and every team builds with Claude credits from Anthropic.",
   ],
   [
-    "Sunday, evening",
-    "Demos and jury",
-    "Every team demonstrates a running agent. The jury scores what runs.",
+    "Sunday, 15:00",
+    "Code freeze and demos",
+    "Submissions close at 15:00. Track judging from 15:30, finals and awards at 17:30.",
   ],
-];
-
-const PRIZES: {
-  track: string;
-  note?: string;
-  prizes: [string, string, string];
-}[] = [
-  {
-    track: "Overall winner",
-    note: "Across all tracks",
-    prizes: ["10,000 AI credits", "2,000 AI credits", "1,000 AI credits"],
-  },
-  {
-    track: "Corporate track",
-    prizes: ["€1,500", "€1,000", "€500"],
-  },
-  {
-    track: "Startup tracks",
-    note: "Each",
-    prizes: ["€1,000", "€500", "€200"],
-  },
-  {
-    track: "UVC track",
-    note: "Every place includes a mentoring session with a UVC partner",
-    prizes: ["€500", "€200", "€100"],
-  },
 ];
 
 const SLOTS: { tier: string; desc: string }[] = [
   {
-    tier: "Challenge partner",
-    desc: "A UVC portfolio company with a live production problem. Owns Track 02.",
+    tier: "Challenge partner · Track 01",
+    desc: "A UVC portfolio company with a live production problem.",
   },
   {
-    tier: "Challenge partner",
-    desc: "A second UVC portfolio company, a second real problem. Owns Track 03.",
+    tier: "Challenge partner · Track 02",
+    desc: "A second UVC portfolio company, a second real problem.",
   },
   {
-    tier: "Corporate partner",
-    desc: "An industrial operator, preferably a UVC LP. Owns Track 04.",
-  },
-  {
-    tier: "Compute partner",
-    desc: "An AI lab. Credits for building through the weekend and as prizes.",
-  },
-  {
-    tier: "Strategic partner",
-    desc: "An ecosystem partner strengthening the program and the talent pool.",
-  },
-];
-
-const TIERS: { title: string; who: string; gets: string[] }[] = [
-  {
-    title: "Challenge partner",
-    who: "A UVC portfolio company, or a UVC LP for the corporate track",
-    gets: [
-      "A problem you choose, worked on by strong technical teams for two days",
-      "A CTO or C-level seat on the jury",
-      "Two days watching how those builders work under pressure",
-      "Working prototypes, evaluated on whether they run",
-    ],
-  },
-  {
-    title: "Jury seat",
-    who: "A UVC partner",
-    gets: [
-      "One UVC seat on the jury alongside the challenge partners",
-      "A concentrated look at strong technical builders under a deadline",
-      "Evaluation of working software, not of decks",
-    ],
-  },
-  {
-    title: "Compute partner",
-    who: "An AI lab",
-    gets: [
-      "AI credits used for building across the whole weekend",
-      "Credits as prizes for the winning teams",
-      "Presence at a two-day event about agents that ship",
-    ],
+    tier: "Challenge partner · Track 03",
+    desc: "A third portfolio company, or UVC's own thesis track.",
   },
 ];
 
@@ -222,36 +152,20 @@ const FIGURES: {
 
 const FAQ: { q: string; a: string }[] = [
   {
-    q: "What does a challenge partner contribute?",
-    a: "Three things: a partner fee that covers venue and catering, one challenge with an owner on site over the weekend, and the prizes for your track. We co-shape the challenge brief with you.",
+    q: "Who can apply?",
+    a: "Anyone who takes ownership and ships. We don't select on background: full-stack engineers, data scientists, designers and business people all belong on the floor, and every team finds its own mix. What we look for is agency, and the drive to work on frontier problems from the portfolio of a deep-tech VC.",
   },
   {
-    q: "What makes a good challenge?",
-    a: "A real agentic problem from your domain, with a dataset or a sandbox API so teams can build something that runs. The best briefs stay open enough to invite solutions you have not thought of.",
+    q: "Do I need a team?",
+    a: "No. Apply solo or as a team of 2-4. Solo applicants form teams on Saturday morning, and the schedule plans time for exactly that.",
   },
   {
-    q: "How much of our team's time does it take?",
-    a: "Upfront work to shape the challenge, then being there for the kick-off and the final pitches. In between, most partners stay close to their track to answer questions and meet teams, but that part is optional.",
+    q: "What does it cost?",
+    a: "Nothing. Food, drinks and compute are covered for the whole weekend, including AI credits for every team.",
   },
   {
-    q: "Who are the participants?",
-    a: "Talented builders from a range of backgrounds. Applications run through Luma with resume, LinkedIn and motivation, and our team curates every admission. Selection is for a high density of talent.",
-  },
-  {
-    q: "Do people apply solo or in teams?",
-    a: "Both. Solo applicants form teams on hackathon day, and the schedule plans time for exactly that.",
-  },
-  {
-    q: "How are teams judged?",
-    a: "On the pitch and, above all, on how the problem is solved technically: agents that actually work, not agents that work hypothetically. Each challenge partner holds one seat on the jury, and a UVC partner judges the open track.",
-  },
-  {
-    q: "What do partners walk away with?",
-    a: "Participant profiles, the prototypes built on your track, and direct access to the talent behind them.",
-  },
-  {
-    q: "Who is organizing it?",
-    a: "Manage & More, UnternehmerTUM's flagship entrepreneurship program, together with UVC Partners. The team has organized several hackathons, most recently hosting the Munich hub of Hack-Nation.",
+    q: "Where exactly is it?",
+    a: "In Munich. The address is sent to accepted participants.",
   },
 ];
 
@@ -286,12 +200,28 @@ export default function Page() {
               className="lockup__uvc"
               priority
             />
+            <span className="lockup__x" aria-hidden="true">
+              ×
+            </span>
+            <Image
+              src="/brand/anthropic.svg"
+              alt="Anthropic"
+              width={1024}
+              height={115}
+              className="lockup__anthropic"
+              priority
+            />
           </div>
 
           <NavSpy items={NAV} />
 
-          <a className="mast__cta" href="#contact">
-            Book 30 minutes
+          <a
+            className="mast__cta"
+            href={LUMA}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Apply
           </a>
         </div>
         <div className="mast__rule" />
@@ -303,12 +233,13 @@ export default function Page() {
           <div className="shell hero__in">
             <div className="hero__lead">
               <p className="label hero__kick">
-                Agentic AI for industry · Munich · 24-25 October 2026
+                Manage &amp; More × UVC Partners × Anthropic · Munich · 24-25
+                October 2026
               </p>
 
               <h1 className="h-display">
                 <span className="hline">
-                  <span className="hline__in">Industrial AI</span>
+                  <span className="hline__in">Industrial</span>
                 </span>
                 <span className="hline">
                   <span className="hline__in">Agents Hackathon</span>
@@ -319,10 +250,10 @@ export default function Page() {
                 <strong>
                   The first hackathon built inside a venture fund.
                 </strong>{" "}
-                UVC portfolio companies set the challenges, UVC partners sit on
-                the jury, and teams get their feedback from the people who
-                actually invest. Scored on agents that run at the demo, not on
-                the pitch.
+                UVC portfolio companies set the challenges, with real data to
+                build against. Anthropic backs every team with Claude. The
+                jury is the people who own the problems and the people who
+                invest, and it scores agents that run, not pitches.
               </p>
             </div>
 
@@ -351,7 +282,7 @@ export default function Page() {
         </section>
 
         {/* ---- the wedge ------------------------------------------------- */}
-        <section className="band band--sunk" id="format">
+        <section className="band band--sunk" id="concept">
           <div className="shell">
             <Reveal className="zone">
               <div className="rule rule--route paint" />
@@ -365,8 +296,8 @@ export default function Page() {
                   Most hackathons put a company&rsquo;s logo on the wall and
                   call it a partnership. Here the venture fund is the structure
                   itself: its portfolio supplies the problems, its partners sit
-                  on the jury, and it gets two days of concentrated exposure to
-                  builders it would otherwise meet one CV at a time.
+                  on the jury, and the builders get two days in front of the
+                  people who fund what comes next.
                 </p>
               </div>
             </Reveal>
@@ -393,10 +324,10 @@ export default function Page() {
             <Reveal className="zone">
               <div className="rule rule--route paint" />
               <div className="zone__head">
-                <h2 className="h-section">Four tracks on the floor.</h2>
+                <h2 className="h-section">Three tracks on the floor.</h2>
                 <p className="prose">
                   Each track is one partner&rsquo;s problem, worked on by
-                  several teams at once.
+                  several teams at once. Briefs are revealed at the kick-off.
                 </p>
               </div>
             </Reveal>
@@ -460,69 +391,24 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ---- prizes ----------------------------------------------------- */}
-        <section className="band band--sunk" id="prizes">
-          <div className="shell">
-            <Reveal className="zone">
-              <div className="rule rule--route paint" />
-              <div className="zone__head">
-                <h2 className="h-section">What winning pays.</h2>
-                <p className="prose">
-                  Every track carries its own podium, and one team takes the
-                  overall title. The structure below is the current plan and
-                  may still evolve with the final partner line-up.
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="prizes">
-              <div className="prizes__cols" aria-hidden="true">
-                <span />
-                <span className="label">1st</span>
-                <span className="label">2nd</span>
-                <span className="label">3rd</span>
-              </div>
-              {PRIZES.map((row) => (
-                <Reveal as="div" key={row.track} className="prize rise">
-                  <div className="prize__track">
-                    <h3 className="h-block">{row.track}</h3>
-                    {row.note && <p className="prize__note">{row.note}</p>}
-                  </div>
-                  {row.prizes.map((p, i) => (
-                    <div className="prize__cell" key={i}>
-                      <span className="label prize__place">
-                        {["1st", "2nd", "3rd"][i]}
-                      </span>
-                      <span className="prize__v">{p}</span>
-                    </div>
-                  ))}
-                </Reveal>
-              ))}
-            </div>
-
-            <p className="prizes__foot">
-              Every track winner additionally takes AI credits home.
-            </p>
-          </div>
-        </section>
-
         {/* ---- partners --------------------------------------------------- */}
-        <section className="band" id="partners">
+        <section className="band band--sunk" id="partners">
           <div className="shell">
             <Reveal className="zone">
               <div className="rule rule--route paint" />
               <div className="zone__head">
                 <h2 className="h-section">The partner line-up.</h2>
                 <p className="prose">
-                  Organized by Manage &amp; More and UVC Partners. Around them,
-                  five partner slots. Each is announced here as it is signed.
+                  Hosted by Manage &amp; More and UVC Partners, together with
+                  Anthropic. Challenge and ecosystem partners are announced
+                  here as they sign.
                 </p>
               </div>
             </Reveal>
 
             <div className="slots">
               <Reveal as="div" className="slot slot--set">
-                <span className="label slot__tier">Organized by</span>
+                <span className="label slot__tier">Hosted by</span>
                 <div className="slot__logos">
                   <Image
                     src="/brand/manage-and-more.png"
@@ -540,13 +426,43 @@ export default function Page() {
                   />
                 </div>
                 <p className="slot__desc">
-                  Both under UnternehmerTUM. Owns Track 01, the UVC hypothesis
-                  track.
+                  Both under UnternehmerTUM. M&amp;M runs the weekend; UVC
+                  brings the portfolio and the jury.
                 </p>
               </Reveal>
 
-              {SLOTS.map((slot, i) => (
-                <Reveal as="div" key={`${slot.tier}-${i}`} className="slot">
+              <Reveal as="div" className="slot slot--set">
+                <span className="label slot__tier">AI partner</span>
+                <div className="slot__logos">
+                  <Image
+                    src="/brand/anthropic.svg"
+                    alt="Anthropic"
+                    width={1024}
+                    height={115}
+                    className="slot__logo slot__logo--anthropic"
+                  />
+                </div>
+                <p className="slot__desc">
+                  Co-host of the weekend. Every team builds with Claude.
+                </p>
+              </Reveal>
+
+              <Reveal as="div" className="slot">
+                <span className="label slot__tier">
+                  Ecosystem &amp; compute partners
+                </span>
+                <div className="slot__plate">
+                  <span className="slot__tba">To be announced</span>
+                </div>
+                <p className="slot__desc">
+                  Cloud credits, tools, food and drinks for 100 builders.
+                  Want to back the weekend?{" "}
+                  <a href={`mailto:${EMAIL}`}>Get in touch</a>.
+                </p>
+              </Reveal>
+
+              {SLOTS.map((slot) => (
+                <Reveal as="div" key={slot.tier} className="slot">
                   <span className="label slot__tier">{slot.tier}</span>
                   <div className="slot__plate">
                     <span className="slot__tba">To be announced</span>
@@ -555,31 +471,11 @@ export default function Page() {
                 </Reveal>
               ))}
             </div>
-
-            <Reveal className="subzone">
-              <span className="label">What each partner gets</span>
-            </Reveal>
-
-            <div className="tiers">
-              {TIERS.map((tier) => (
-                <Reveal as="div" key={tier.title} className="tier">
-                  <div className="tier__id">
-                    <h3 className="h-block">{tier.title}</h3>
-                    <p className="tier__who">{tier.who}</p>
-                  </div>
-                  <ul className="tier__gets">
-                    {tier.gets.map((g) => (
-                      <li key={g}>{g}</li>
-                    ))}
-                  </ul>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </section>
 
         {/* ---- who is delivering ----------------------------------------- */}
-        <section className="band band--sunk" id="who">
+        <section className="band" id="who">
           <div className="shell">
             <Reveal className="zone">
               <div className="rule rule--route paint" />
@@ -644,13 +540,12 @@ export default function Page() {
         </section>
 
         {/* ---- faq ------------------------------------------------------- */}
-        <section className="band" id="faq">
+        <section className="band band--sunk" id="faq">
           <div className="shell">
             <Reveal className="zone">
               <div className="rule rule--route paint" />
               <div className="zone__head">
                 <h2 className="h-section">FAQ.</h2>
-                <p className="label zone__tag">For our partners</p>
               </div>
             </Reveal>
 
@@ -662,16 +557,16 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ---- contact --------------------------------------------------- */}
-        <section className="band band--sunk contact" id="contact">
+        {/* ---- apply ----------------------------------------------------- */}
+        <section className="band contact" id="apply">
           <div className="shell">
             <Reveal className="zone">
               <div className="rule rule--route paint" />
               <div className="zone__head">
                 <h2 className="h-section">
-                  Take a track, take a jury seat,
+                  Around 100 places.
                   <br />
-                  or ask what it would cost you.
+                  Selection is rolling.
                 </h2>
               </div>
             </Reveal>
@@ -679,12 +574,12 @@ export default function Page() {
             <div className="contact__stack">
               <a
                 className="book"
-                href={CALENDLY}
+                href={LUMA}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="book__label">Book a call</span>
-                <span className="book__meta">30 minutes · video</span>
+                <span className="book__label">Apply on Luma</span>
+                <span className="book__meta">Solo or in teams of 2-4</span>
                 <span className="book__arrow">
                   <Arrow />
                 </span>
@@ -693,11 +588,11 @@ export default function Page() {
               <a
                 className="mailto"
                 href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                  "Industrial AI Agents Hackathon: partner enquiry",
+                  "Industrial Agents Hackathon",
                 )}`}
               >
                 <span className="mailto__text">
-                  Or reach out by email instead
+                  Questions? Reach out by email
                 </span>
                 <span className="mailto__arrow">
                   <Arrow />
@@ -728,9 +623,19 @@ export default function Page() {
               height={288}
               className="lockup__uvc"
             />
+            <span className="lockup__x" aria-hidden="true">
+              ×
+            </span>
+            <Image
+              src="/brand/anthropic.svg"
+              alt="Anthropic"
+              width={1024}
+              height={115}
+              className="lockup__anthropic"
+            />
           </div>
           <p className="foot__note">
-            Industrial AI Agents Hackathon · Munich · 24-25 October 2026
+            Industrial Agents Hackathon · Munich · 24-25 October 2026
           </p>
         </div>
       </footer>

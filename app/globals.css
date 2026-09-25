@@ -509,6 +509,11 @@ html {
   width: auto;
 }
 
+.lockup__anthropic {
+  height: 13px;
+  width: auto;
+}
+
 .lockup__x {
   font-size: 0.9rem;
   color: var(--ink-40);
@@ -660,7 +665,7 @@ html {
 
 .floorline__ticks {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(0.5rem, 1.4vw, 1.25rem);
   border-bottom: 1px solid var(--hair);
 }
@@ -809,7 +814,7 @@ html {
 
 .bays {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--hair);
   border-block: 3px solid var(--ink);
@@ -1213,6 +1218,10 @@ html {
   height: 30px;
 }
 
+.slot__logo--anthropic {
+  height: 16px;
+}
+
 /* uncommissioned ground: caution hatching until the nameplate lands */
 .slot__plate {
   min-height: 76px;
@@ -1603,6 +1612,10 @@ html {
   height: 31px;
 }
 
+.lockup--foot .lockup__anthropic {
+  height: 11px;
+}
+
 .foot__note {
   font-size: 0.8125rem;
   line-height: 1.5;
@@ -1615,9 +1628,6 @@ html {
    ========================================================================== */
 
 @media (max-width: 1080px) {
-  .bays {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .directions__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1719,6 +1729,9 @@ html {
   }
   .lockup__uvc {
     height: 28px;
+  }
+  .lockup__anthropic {
+    height: 9px;
   }
   .lockup {
     gap: 0.6rem;
