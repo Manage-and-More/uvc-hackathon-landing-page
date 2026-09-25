@@ -10,13 +10,13 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Industrial AI Agents Hackathon · Manage & More × UVC Partners",
+  title: "Industrial Agents Hackathon · Manage & More × UVC Partners × Anthropic",
   description:
-    "The first hackathon built inside a venture fund. Two days in Munich on agentic AI for industry, 24-25 October 2026. UVC portfolio companies set the challenges, UVC partners judge, and teams are scored on agents that actually run.",
+    "The first hackathon built inside a venture fund. Two days in Munich on agentic AI for industry, 24-25 October 2026. UVC portfolio companies set the challenges, Anthropic backs every team with Claude, and teams are scored on agents that actually run. Apply on Luma.",
   openGraph: {
-    title: "Industrial AI Agents Hackathon",
+    title: "Industrial Agents Hackathon: MM × UVC × Anthropic",
     description:
-      "The first hackathon built inside a venture fund. Two days, Munich, 24-25 October 2026. Four challenge tracks set around the UVC portfolio. Teams are scored on agents that actually run.",
+      "The first hackathon built inside a venture fund. Two days, Munich, 24-25 October 2026. Three challenge tracks set around the UVC portfolio. Teams are scored on agents that actually run.",
     type: "website",
   },
 };  
@@ -29,14 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivo.variable}>
       <head>
-        {/* Calendly's two hosts, warmed during page render so the scheduler
-            pays no DNS/TLS cost when it mounts. */}
-        <link rel="preconnect" href="https://assets.calendly.com" />
-        <link
-          rel="preconnect"
-          href="https://calendly.com"
-          crossOrigin="anonymous"
-        />
         {/* Opt into the reveal animations' hidden start state, then release it
             if the bundle never arrives to run them. Without the failsafe a
             failed hydration leaves half the page invisible. */}
