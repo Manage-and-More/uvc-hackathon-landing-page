@@ -2,6 +2,7 @@ import Image from "next/image";
 import Reveal from "./reveal";
 import FaqItem from "./faq";
 import AgentTrace from "./trace";
+import ScrollSettle from "./settle";
 import { CountUp, Countdown, Material, NavSpy } from "./fx";
 
 const EMAIL = "akshat.tandon@tum.de";
@@ -150,7 +151,7 @@ function ZoneHead({
   children?: React.ReactNode;
 }) {
   return (
-    <Reveal className="zone rv">
+    <Reveal className={`zone rv${children ? "" : " zone--solo"}`}>
       <div className="zone__head">
         <Eyebrow no={no} label={label} />
         <h2 className="h-sec">{title}</h2>
@@ -168,6 +169,7 @@ export default function Page() {
       </a>
 
       <Material />
+      <ScrollSettle />
       <div className="grain" aria-hidden="true" />
 
       <header className="top">
@@ -225,7 +227,7 @@ export default function Page() {
             </div>
             <div className="hero__foot">
               <span className="mono">Two days on site</span>
-              <span className="mono">≈100 builders</span>
+              <span className="mono">100 builders</span>
               <span className="mono">Teams up to 4</span>
             </div>
           </div>
@@ -433,7 +435,7 @@ export default function Page() {
                   </div>
                   <div className="fig">
                     <CountUp className="fig__n" value={10} suffix="+" />
-                    <span className="fig__w">Venture funds</span>
+                    <span className="fig__w">Alumni-founded VC funds</span>
                   </div>
                 </div>
               </div>
@@ -482,7 +484,7 @@ export default function Page() {
             <Reveal className="rv">
               <Eyebrow no="07" label="Apply" />
               <h2 className="h-big apply__title">
-                Around 100 places. Selection is rolling.
+                100 places. Selection is rolling.
               </h2>
               <div className="apply__row">
                 <a
