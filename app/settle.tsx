@@ -7,7 +7,7 @@ import { useEffect } from "react";
    never yanks back. Any input, or a scroll we didn't write, cancels the glide.
    Off for touch and reduced motion. */
 
-const REACH_AHEAD = 0.45; // of viewport height
+const REACH_AHEAD = 0.66; // of viewport height: fires once ~1/3 of the next block shows
 const REACH_BEHIND = 0.25;
 const IDLE_MS = 140; // quiet time before settling
 const HOLD_MS = 60; // beat before the glide starts
