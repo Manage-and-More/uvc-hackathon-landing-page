@@ -227,7 +227,7 @@ export default function Page() {
             </div>
             <div className="hero__foot">
               <span className="mono">Two days on site</span>
-              <span className="mono">≈100 builders</span>
+              <span className="mono">100 builders</span>
               <span className="mono">Teams up to 4</span>
             </div>
           </div>
@@ -484,7 +484,7 @@ export default function Page() {
             <Reveal className="rv">
               <Eyebrow no="07" label="Apply" />
               <h2 className="h-big apply__title">
-                Around 100 places. Selection is rolling.
+                100 places. Selection is rolling.
               </h2>
               <div className="apply__row">
                 <a
