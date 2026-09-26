@@ -2,10 +2,8 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-/**
- * The page's one authored motion: marking gets painted on as you reach it,
- * left to right, once. Everything is visible by default if JS never runs.
- */
+/* Adds .is-on while the element is in view and removes it when it leaves, so
+   reveals play again on the way back. Everything is visible without JS. */
 export default function Reveal({
   children,
   className = "",
@@ -13,7 +11,7 @@ export default function Reveal({
 }: {
   children: ReactNode;
   className?: string;
-  as?: "div" | "section" | "li" | "tr";
+  as?: "div" | "section" | "li" | "tr" | "ul" | "ol";
 }) {
   const ref = useRef<HTMLElement>(null);
 
@@ -37,13 +35,10 @@ export default function Reveal({
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-on");
-            io.unobserve(entry.target);
-          }
+          entry.target.classList.toggle("is-on", entry.isIntersecting);
         }
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.1 },
     );
 
     io.observe(el);
