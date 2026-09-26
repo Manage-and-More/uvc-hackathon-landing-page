@@ -21,19 +21,19 @@ const NAV: [string, string][] = [
 
 const LANES: { title: string; body: string; verdict: string; ours?: boolean }[] = [
   {
-    title: "A corporate hackathon",
-    body: "Real budget, real brand, a real problem. But the problem belongs to one company's roadmap, and there is no investor in the room when a team turns out to be exceptional.",
-    verdict: "No investor access",
+    title: "The problems",
+    body: "Live commercial problems drawn from the UVC portfolio. Every brief comes from a company already operating on it, with its owner in the room.",
+    verdict: "From the portfolio",
   },
   {
-    title: "A student hackathon",
-    body: "Real builders and real energy. But the problems are invented for the weekend, and nothing that gets built has anyone waiting for it on Monday.",
-    verdict: "No production problems",
+    title: "The room",
+    body: "Fund partners take part as speakers, mentors and judges. Portfolio operators run the tracks they set.",
+    verdict: "Investors and operators",
   },
   {
-    title: "This one",
-    body: "The fund's portfolio sets the challenges, so every track is a live commercial problem with its owner in the room. The fund's partners judge, so teams are evaluated by people who back startups for a living.",
-    verdict: "Both, structurally",
+    title: "After Sunday",
+    body: "The demos take an afternoon. What follows runs longer: investor conversations, job offers from portfolio companies, or contacts worth calling months later.",
+    verdict: "A doorway, not a weekend",
     ours: true,
   },
 ];
@@ -246,11 +246,10 @@ export default function Page() {
               }
             >
               <p>
-                Most hackathons put a company&rsquo;s logo on the wall and call it a
-                partnership. Here the venture fund is the structure itself: its
-                portfolio supplies the problems, its partners sit on the jury, and
-                the builders get two days in front of the people who fund what comes
-                next.
+                The venture fund is the structure itself, not a sponsor line.
+                Its portfolio supplies the problems, its partners sit on the
+                jury, and the builders get two days in front of the people who
+                fund what comes next.
               </p>
             </ZoneHead>
             <Reveal as="ul" className="lanes rv">
@@ -380,10 +379,14 @@ export default function Page() {
                       height={115}
                       className="pslot__logo pslot__logo--an"
                     />
-                    <span className="pslot__label">
-                      <small>Claude for every team · office hours through the night</small>
-                    </span>
                   </a>
+                </div>
+              </div>
+
+              <div className="pgroup pgroup--ecosystem">
+                <div className="pgroup__head">
+                  <span className="mono">Ecosystem partners</span>
+                  <span className="mono pgroup__count">To be announced</span>
                 </div>
               </div>
             </Reveal>
