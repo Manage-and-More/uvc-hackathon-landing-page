@@ -2,6 +2,7 @@ import Image from "next/image";
 import Reveal from "./reveal";
 import FaqItem from "./faq";
 import AgentTrace from "./trace";
+import ScrollSettle from "./settle";
 import { CountUp, Countdown, Material, NavSpy } from "./fx";
 
 const EMAIL = "akshat.tandon@tum.de";
@@ -150,7 +151,7 @@ function ZoneHead({
   children?: React.ReactNode;
 }) {
   return (
-    <Reveal className="zone rv">
+    <Reveal className={`zone rv${children ? "" : " zone--solo"}`}>
       <div className="zone__head">
         <Eyebrow no={no} label={label} />
         <h2 className="h-sec">{title}</h2>
@@ -168,6 +169,7 @@ export default function Page() {
       </a>
 
       <Material />
+      <ScrollSettle />
       <div className="grain" aria-hidden="true" />
 
       <header className="top">
@@ -433,7 +435,7 @@ export default function Page() {
                   </div>
                   <div className="fig">
                     <CountUp className="fig__n" value={10} suffix="+" />
-                    <span className="fig__w">Venture funds</span>
+                    <span className="fig__w">Alumni-founded VC funds</span>
                   </div>
                 </div>
               </div>
