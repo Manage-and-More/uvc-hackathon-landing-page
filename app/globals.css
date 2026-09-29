@@ -432,7 +432,7 @@ html.is-scrolled .top {
 }
 .cd {
   display: inline-block;
-  min-width: 19ch;
+  min-width: 36ch;
   text-align: right;
   font-family: var(--mono);
   font-size: 0.6875rem;
@@ -440,6 +440,10 @@ html.is-scrolled .top {
   color: var(--orange-2);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+}
+.cd--short {
+  min-width: 0;
+  text-align: left;
 }
 
 /* logos: all three are dark artwork, rendered white on the ground */
@@ -544,6 +548,15 @@ html.is-scrolled .top {
 .hero__sub .mono,
 .hero__sub .lede {
   margin: 0;
+}
+.hero__cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+}
+.hero__sub .hero__due {
+  color: var(--orange-2);
 }
 .hero__side {
   align-self: end;
@@ -1420,8 +1433,7 @@ html:not(.js) .fig::before {
 }
 
 @media (max-width: 900px) {
-  .top__nav,
-  .cd {
+  .top__nav {
     display: none;
   }
   .lane {
@@ -1503,5 +1515,12 @@ html:not(.js) .fig::before {
   }
   .faq__a {
     padding-left: 48px;
+  }
+}
+
+/* the full deadline countdown crowds the logos below this width */
+@media (max-width: 1000px) {
+  .cd:not(.cd--short) {
+    display: none;
   }
 }

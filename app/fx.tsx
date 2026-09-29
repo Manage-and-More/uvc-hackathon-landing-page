@@ -42,21 +42,25 @@ export function Material() {
 }
 
 /* ----------------------------------------------------------------------------
-   Countdown to kick-off. Server-renders a static "T-" placeholder so nothing
-   shifts; the client fills the live value once mounted.
+   Countdown to the application deadline. Server-renders a static placeholder
+   so nothing shifts; the client fills the live value once mounted.
    ------------------------------------------------------------------------- */
-const KICKOFF = Date.parse("2026-10-24T10:00:00+02:00");
+const DEADLINE = Date.parse("2026-10-18T23:59:59+02:00");
 
 function pad(n: number, l: number) {
   return String(n).padStart(l, "0");
 }
 
 export function Countdown({ short = false }: { short?: boolean }) {
-  const [text, setText] = useState(short ? "" : "");
+  const [text, setText] = useState("");
 
   useEffect(() => {
     const tick = () => {
-      let s = Math.max(0, Math.floor((KICKOFF - Date.now()) / 1000));
+      let s = Math.floor((DEADLINE - Date.now()) / 1000);
+      if (s <= 0) {
+        setText("Applications closed");
+        return false;
+      }
       const d = Math.floor(s / 86400);
       s -= d * 86400;
       const h = Math.floor(s / 3600);
@@ -65,18 +69,26 @@ export function Countdown({ short = false }: { short?: boolean }) {
       s -= m * 60;
       setText(
         short
-          ? `T-${pad(d, 3)}d to kick-off`
-          : `T-${pad(d, 3)}d ${pad(h, 2)}h ${pad(m, 2)}m ${pad(s, 2)}s`,
+          ? d > 0
+            ? `Applications close 18 October · ${d} ${d === 1 ? "day" : "days"} left`
+            : "Applications close tonight"
+          : `Applications close in ${pad(d, 2)}d ${pad(h, 2)}h ${pad(m, 2)}m ${pad(s, 2)}s`,
       );
+      return true;
     };
-    tick();
-    const id = window.setInterval(tick, 1000);
+    if (!tick()) return;
+    const id = window.setInterval(() => {
+      if (!tick()) window.clearInterval(id);
+    }, 1000);
     return () => window.clearInterval(id);
   }, [short]);
 
   return (
-    <span className="cd" aria-label="Countdown to kick-off">
-      {text || (short ? "Kick-off 24 October" : "24 October, 10:00")}
+    <span
+      className={short ? "cd cd--short" : "cd"}
+      aria-label="Countdown to the application deadline"
+    >
+      {text || "Applications close 18 October"}
     </span>
   );
 }

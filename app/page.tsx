@@ -212,14 +212,17 @@ export default function Page() {
                   Two days in Munich on live problems from the UVC portfolio.
                   Judged on what runs.
                 </p>
-                <a
-                  className="btn btn--solid"
-                  href={LUMA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply on Luma <span aria-hidden="true">→</span>
-                </a>
+                <div className="hero__cta">
+                  <a
+                    className="btn btn--solid"
+                    href={LUMA}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Apply on Luma <span aria-hidden="true">→</span>
+                  </a>
+                  <span className="mono hero__due">Apply by 18 October</span>
+                </div>
               </div>
             </div>
             <div className="hero__side">
