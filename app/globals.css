@@ -1173,15 +1173,86 @@ html:not(.js) .fig::before {
   padding: 36px 0 44px;
   border-top: 1px solid var(--hair);
 }
-.foot__in {
+.foot__grid {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 40px clamp(48px, 8vw, 120px);
+}
+.foot__brand {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 24px;
-  flex-wrap: wrap;
 }
 .foot__note {
   margin: 0;
+  line-height: 1.9;
+}
+.foot__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.foot__label {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.foot__link {
+  color: var(--text);
+  transition: color 0.2s;
+}
+.foot__link:hover {
+  color: var(--orange-2);
+}
+@media (max-width: 720px) {
+  .foot__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .foot__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- legal page ------------------------------------------------ */
+
+.legal {
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: var(--band);
+}
+.legal__back {
+  display: inline-block;
+  margin-bottom: clamp(48px, 7vw, 96px);
+  transition: color 0.2s;
+}
+.legal__back:hover {
+  color: var(--orange-2);
+}
+.legal__date {
+  margin: 16px 0 0;
+}
+.legal__body {
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.legal__body h2 {
+  margin: 2.4em 0 0.6em;
+  font-family: var(--mono);
+  font-size: 0.71875rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.legal__body h2:first-child {
+  margin-top: 0;
+}
+.legal__body a {
+  border-bottom: 1px solid var(--hair);
+  transition: border-color 0.2s, color 0.2s;
+}
+.legal__body a:hover {
+  color: var(--orange-2);
+  border-color: var(--orange-2);
 }
 
 /* ============================================================================

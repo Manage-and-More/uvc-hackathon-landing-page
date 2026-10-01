@@ -7,6 +7,18 @@ import { CountUp, Countdown, Material, NavSpy } from "./fx";
 
 const EMAIL = "akshat.tandon@tum.de";
 const LUMA = "https://luma.com/070qezlj";
+const SOCIAL: [string, string][] = [
+  ["LinkedIn", "https://www.linkedin.com/school/manage-more-by-unternehmertum/"],
+  ["Instagram", "https://www.instagram.com/manageandmore/"],
+];
+const LEGAL: [string, string][] = [
+  ["Imprint", "https://www.manageandmore.de/imprint/"],
+  ["Privacy", "/privacy"],
+  [
+    "Terms",
+    "https://manageandmore.notion.site/Industrial-Agents-Hackathon-Terms-Conditions-3e202ddfbf4e808aa2f6d44bc6421e07",
+  ],
+];
 const HOSTS = {
   mm: { href: "https://www.manageandmore.de", alt: "Manage & More" },
   uvc: { href: "https://www.uvcpartners.com", alt: "UVC Partners" },
@@ -516,13 +528,40 @@ export default function Page() {
       </main>
 
       <footer className="foot">
-        <div className="shell foot__in">
-          <Logos variant="foot" />
-          <p className="mono foot__note">
-            Industrial Agents Hackathon · Munich · 24-25 October 2026
-          </p>
+        <div className="shell foot__grid">
+          <div className="foot__brand">
+            <Logos variant="foot" />
+            <p className="mono foot__note">
+              Industrial Agents Hackathon
+              <br />
+              Munich · 24-25 October 2026
+            </p>
+          </div>
+          <FootLinks label="Connect" links={SOCIAL} />
+          <FootLinks label="Legal" links={LEGAL} />
         </div>
       </footer>
     </>
+  );
+}
+
+function FootLinks({ label, links }: { label: string; links: [string, string][] }) {
+  return (
+    <nav className="foot__col" aria-label={label}>
+      <span className="mono foot__label">{label}</span>
+      {links.map(([text, href]) => (
+        <a
+          key={text}
+          className="mono foot__link"
+          href={href}
+          {...(href.startsWith("http") && {
+            target: "_blank",
+            rel: "noopener noreferrer",
+          })}
+        >
+          {text}
+        </a>
+      ))}
+    </nav>
   );
 }
